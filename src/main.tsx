@@ -198,7 +198,7 @@ function App() {
             <div className="hero-poster-wrap">
               <img
                 className="hero-poster"
-                src="/images/cartaz-acampamento.jpeg"
+                src="/images/Acampamento 2027_ Enraizados em Cristo.png"
                 alt="Cartaz oficial do Acampamento Enraizados em Cristo 2027"
               />
 
@@ -249,7 +249,7 @@ function App() {
                 <span>
                   Firmes na fé
                   <br />
-                  <strong>Colossenses 2:6</strong>
+                  <strong>Colossenses 2:6-7</strong>
                 </span>
               </div>
             </div>
@@ -323,6 +323,7 @@ function App() {
                 <p>Quatro dias especiais em 2027.</p>
               </article>
 
+              
               <article className="info-card">
                 <div className="info-icon">
                   <Heart />
@@ -335,7 +336,16 @@ function App() {
                   Por pessoa, com hospedagem, alimentação
                   e transporte inclusos.
                 </p>
+
+                <div className="children-notice">
+                  <strong>👶 Atenção aos responsáveis!</strong>
+                  <p>
+                    Crianças de até 5 anos não pagam.
+                    A partir de 6 anos, o valor fica normal.
+                  </p>
+                </div>
               </article>
+
 
               <article className="info-card">
                 <div className="info-icon">
@@ -400,7 +410,7 @@ function App() {
               aria-label="Ampliar cartaz oficial"
             >
               <img
-                src="/images/cartaz-acampamento.jpeg"
+                src="/images/Acampamento 2027_ Enraizados em Cristo.png"
                 alt="Cartaz do Acampamento ICPBB Jardim Miriam 2027"
               />
             </button>
@@ -561,7 +571,7 @@ function App() {
           </button>
 
           <img
-            src="/images/cartaz-acampamento.jpeg"
+            src="/images/Acampamento 2027_ Enraizados em Cristo.png"
             alt="Cartaz oficial completo do acampamento"
             onClick={(event) => event.stopPropagation()}
           />

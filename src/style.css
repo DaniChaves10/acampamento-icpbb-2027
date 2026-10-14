@@ -1,1079 +1,2304 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
+
+
 /* =========================================
+
    1. CONFIGURAÇÕES GERAIS
-========================================= */
+
+\========================================= */
+
+
 
 :root {
+
   font-family: 'DM Sans', sans-serif;
+
   color: #203b30;
+
   background: #faf6ee;
+
   font-synthesis: none;
+
   font-weight: 400;
+
 }
+
+
 
 * {
+
   box-sizing: border-box;
+
 }
+
+
 
 html {
+
   scroll-behavior: smooth;
+
 }
+
+
 
 body {
+
   margin: 0;
+
 }
+
+
 
 button,
+
 a {
+
   font: inherit;
+
 }
+
+
 
 button {
+
   cursor: pointer;
+
 }
+
+
 
 a {
+
   text-decoration: none;
+
   color: inherit;
+
 }
+
+
 
 img {
+
   max-width: 100%;
+
   display: block;
+
 }
+
+
 
 section {
+
   scroll-margin-top: 76px;
+
 }
+
+
 
 .container {
+
   width: min(1140px, calc(100% - 44px));
+
   margin-inline: auto;
+
 }
 
+
+
 /* =========================================
+
    2. CABEÇALHO E NAVEGAÇÃO
-========================================= */
+
+\========================================= */
+
+
 
 .header {
+
   position: sticky;
+
   top: 0;
+
   z-index: 20;
+
   background: #fffdf7f2;
+
   backdrop-filter: blur(16px);
+
   border-bottom: 1px solid #e9e7dc;
+
 }
+
+
 
 .nav {
+
   height: 78px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 22px;
+
 }
+
+
 
 .brand {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 10px;
+
   font-size: 21px;
+
   font-weight: 800;
+
   line-height: 1;
+
   color: #133f2b;
+
 }
+
+
 
 .brand small {
+
   display: block;
+
   letter-spacing: 2px;
+
   font-size: 9px;
+
   margin-top: 6px;
+
 }
+
+
 
 .brand-mark {
+
   height: 43px;
+
   width: 43px;
+
   border-radius: 50%;
+
   display: grid;
+
   place-items: center;
+
   background: #e6f0e4;
+
   color: #31714d;
+
 }
+
+
 
 .nav-links {
+
   display: flex;
+
   gap: 28px;
+
   align-items: center;
+
 }
+
+
 
 .nav-links a {
+
   font-size: 13px;
+
   font-weight: 700;
+
   transition: color 0.2s;
+
 }
+
+
 
 .nav-links a:hover,
+
 .text-link:hover {
+
   color: #bb8c3f;
+
 }
+
+
 
 .nav-cta {
+
   display: flex;
+
   gap: 10px;
+
   align-items: center;
+
   background: #15452f;
+
   color: white;
+
   border-radius: 7px;
+
   padding: 13px 18px;
+
   font-weight: 700;
+
   font-size: 13px;
+
 }
+
+
 
 .menu-button,
+
 .mobile-signup {
+
   display: none;
+
 }
+
+
 
 /* =========================================
+
    3. HERO - PÁGINA INICIAL
-========================================= */
+
+\========================================= */
+
+
 
 .hero {
+
   position: relative;
+
   isolation: isolate;
+
   background:
+
     radial-gradient(
+
       circle at 80% 25%,
+
       #476e49 0,
+
       transparent 35%
+
     ),
+
     linear-gradient(
+
       125deg,
+
       #082b1f,
+
       #16462e 65%,
+
       #204b31
+
     );
+
   color: #fff;
+
   overflow: hidden;
+
 }
+
+
 
 .hero::before {
+
   content: '';
+
   position: absolute;
+
   inset: 0;
+
   z-index: -1;
+
   opacity: 0.15;
+
   background: repeating-radial-gradient(
+
     ellipse at 90% 100%,
+
     transparent 0 58px,
+
     #dfc47b 60px 62px,
+
     transparent 64px 110px
+
   );
+
 }
+
+
 
 .hero-overlay {
+
   position: absolute;
+
   inset: 0;
+
   pointer-events: none;
+
   background: linear-gradient(
+
     90deg,
+
     #08291a80,
+
     transparent
+
   );
+
 }
+
+
 
 .hero-grid {
+
   position: relative;
+
   display: grid;
+
   grid-template-columns: 1.18fr 0.82fr;
+
   align-items: center;
+
   gap: 90px;
+
   min-height: 690px;
+
   padding-top: 75px;
+
   padding-bottom: 95px;
+
 }
+
+
 
 .eyebrow,
+
 .kicker,
+
 .section-tag {
+
   font-size: 11px;
+
   letter-spacing: 2.4px;
+
   font-weight: 800;
+
   color: #dcb970;
+
 }
+
+
 
 .eyebrow {
+
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
 }
+
+
 
 .pulse {
+
   width: 8px;
+
   height: 8px;
+
   background: #dcb970;
+
   border-radius: 50%;
+
   box-shadow: 0 0 0 5px #dcb97025;
+
 }
+
+
 
 .hero h1 {
+
   font-size: clamp(58px, 6.4vw, 94px);
+
   line-height: 1.02;
+
   letter-spacing: -4px;
+
   margin: 27px 0 24px;
+
   max-width: 650px;
+
 }
+
+
 
 .hero h1 em,
+
 .section h2 em {
+
   display: block;
+
   font-family: 'Playfair Display', serif;
+
   font-weight: 500;
+
   color: #e1bc73;
+
   letter-spacing: -2px;
+
 }
+
+
 
 .hero-description {
+
   font-size: 18px;
+
   line-height: 1.8;
+
   color: #e1eadf;
+
   max-width: 490px;
+
 }
+
+
 
 .hero-meta {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 14px;
+
   margin: 30px 0;
+
 }
+
+
 
 .hero-meta span {
+
   display: flex;
+
   gap: 11px;
+
   align-items: center;
+
   font-size: 14px;
+
   font-weight: 700;
+
 }
+
+
 
 .hero-meta svg {
+
   color: #e1bc73;
+
 }
+
+
 
 .hero-actions {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 12px;
+
 }
+
+
 
 .hero-verse {
+
   margin-top: 43px;
+
   border-left: 2px solid #e1bc73;
+
   padding-left: 18px;
+
   font: italic 14px/1.7 'Playfair Display', serif;
+
   color: #e2e7d9;
+
   max-width: 510px;
+
 }
 
+
+
 .hero-verse strong {
+
   color: #e1bc73;
+
   white-space: nowrap;
+
 }
+
+
 
 /* Botões */
 
+
+
 .button {
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 12px;
+
   border-radius: 7px;
+
   padding: 16px 24px;
+
   font-size: 14px;
+
   font-weight: 800;
+
   transition: transform 0.25s, background 0.25s;
+
   border: 1px solid transparent;
+
 }
+
+
 
 .button:hover {
+
   transform: translateY(-3px);
+
 }
+
+
 
 .button-gold {
+
   background: #e0ba70;
+
   color: #173b29;
+
 }
+
+
 
 .button-gold:hover {
+
   background: #f1cf8d;
+
 }
+
+
 
 .button-outline {
+
   border-color: #ffffff75;
+
   color: white;
+
 }
+
+
 
 .button-outline:hover {
+
   background: #ffffff18;
+
 }
 
+
+
 .button-dark {
+
   background: #17442f;
+
   color: white;
+
   margin-top: 20px;
+
 }
+
+
 
 /* Cartaz na página inicial */
 
+
+
 .hero-poster-wrap {
+
   position: relative;
+
   max-width: 355px;
+
   justify-self: center;
+
   transform: rotate(2deg);
+
   filter: drop-shadow(0 25px 35px #00150e7c);
+
   animation: float 6s ease-in-out infinite;
+
 }
+
+
 
 .hero-poster {
+
   border: 7px solid #f7e9c9;
+
   border-radius: 7px;
+
   max-height: 530px;
+
   object-fit: contain;
+
 }
+
+
 
 .poster-sticker {
+
   position: absolute;
+
   right: -35px;
+
   bottom: 35px;
+
   background: #f9f0d9;
+
   color: #24503a;
+
   padding: 13px 16px;
+
   border-radius: 7px;
+
   font-size: 12px;
+
   font-weight: 800;
+
   display: flex;
+
   align-items: center;
+
   gap: 8px;
+
   transform: rotate(-5deg);
+
   box-shadow: 0 8px 30px #0003;
+
 }
+
+
 
 .scroll-hint {
+
   position: absolute;
+
   bottom: 20px;
+
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
+
   gap: 9px;
+
   align-items: center;
+
   font-size: 10px;
+
   letter-spacing: 2px;
+
   color: #dfc991;
+
 }
+
+
 
 @keyframes float {
+
   50% {
+
     transform: translateY(-10px) rotate(1deg);
+
   }
+
 }
 
+
+
 /* =========================================
+
    4. CONTAGEM REGRESSIVA
-========================================= */
+
+\========================================= */
+
+
 
 .countdown-band {
+
   background: #e7d5aa;
+
   padding: 29px 0;
+
 }
+
+
 
 .countdown-layout {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 25px;
+
 }
+
+
 
 .countdown-layout h2 {
+
   margin: 6px 0 0;
+
   color: #173d2b;
+
   font: 600 25px 'Playfair Display', serif;
+
 }
+
+
 
 .countdown-band .kicker {
+
   color: #87612f;
+
 }
+
+
 
 .count-items {
+
   display: flex;
+
   gap: 12px;
+
 }
+
+
 
 .count-unit {
+
   background: #fffaf0;
+
   border-radius: 9px;
+
   min-width: 76px;
+
   padding: 12px 14px;
+
   text-align: center;
+
 }
+
+
 
 .count-unit strong {
+
   display: block;
+
   font-size: 27px;
+
   color: #18462f;
+
   font-variant-numeric: tabular-nums;
+
 }
+
+
 
 .count-unit span {
+
   font-size: 10px;
+
   text-transform: uppercase;
+
   color: #6c745d;
+
 }
 
+
+
 /* =========================================
+
    5. ESTILOS DAS SEÇÕES
-========================================= */
+
+\========================================= */
+
+
 
 .section {
+
   padding: 110px 0;
+
 }
+
+
 
 .about-grid,
+
 .poster-grid,
+
 .gallery-grid {
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 85px;
+
   align-items: center;
+
 }
+
+
 
 .section-tag {
+
   color: #aa7b3c;
+
 }
+
+
 
 .section h2 {
+
   font-size: clamp(35px, 4vw, 51px);
+
   line-height: 1.18;
+
   letter-spacing: -1.8px;
+
   color: #153e2b;
+
   margin: 20px 0 23px;
+
 }
+
+
 
 .section h2 em {
+
   color: #a77c43;
+
   letter-spacing: -1px;
+
 }
+
+
 
 .section p {
+
   line-height: 1.9;
+
   color: #627067;
+
   font-size: 15px;
+
 }
 
+
+
 /* =========================================
+
    6. SOBRE O ACAMPAMENTO
-========================================= */
+
+\========================================= */
+
+
 
 .about-visual {
+
   position: relative;
+
 }
+
+
 
 .about-image {
+
+  width: 100%;
+
   height: 475px;
+
   border-radius: 16px;
-  background:
-    linear-gradient(155deg, #f2c87815, #10371e90),
-    url('/images/cartaz-acampamento.jpg') center 47% / cover;
+
+
+
+  background-image: url('/images/fotos-sitio.png');
+
+  background-position: center;
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  background-color: #faf6ee;
+
+
+
   box-shadow: 20px 20px 0 #e8e3cf;
+
 }
+
+
 
 .verse-badge {
+
   position: absolute;
+
   right: -24px;
+
   bottom: 32px;
+
   background: #153e2c;
+
   color: #fff;
+
   padding: 18px 24px;
+
   display: flex;
+
   align-items: center;
+
   gap: 14px;
+
   border-radius: 10px;
+
   box-shadow: 0 12px 30px #0002;
+
 }
+
+
 
 .verse-badge svg {
+
   color: #dfbc77;
+
 }
+
+
 
 .verse-badge span {
+
   font-size: 13px;
+
   line-height: 1.5;
+
 }
+
+
 
 .verse-badge strong {
+
   color: #dfbc77;
+
 }
+
+
 
 .feature-list {
+
   display: grid;
+
   gap: 13px;
+
   margin: 27px 0;
+
 }
+
+
 
 .feature-list span {
+
   display: flex;
+
   gap: 12px;
+
   align-items: center;
+
   font-size: 14px;
+
   font-weight: 700;
+
 }
+
+
 
 .feature-list svg {
+
   color: #438255;
+
 }
+
+
 
 .text-link {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 12px;
+
   color: #16462e;
+
   font-weight: 800;
+
   font-size: 14px;
+
   border-bottom: 1px solid #b99a60;
+
   padding-bottom: 8px;
+
 }
 
+
+
 /* =========================================
+
    7. INFORMAÇÕES DO ACAMPAMENTO
-========================================= */
+
+\========================================= */
+
+
 
 .details {
+
   background: #f0efe6;
+
 }
+
+
 
 .section-heading {
+
   text-align: center;
+
   max-width: 670px;
+
   margin: 0 auto 46px;
+
 }
+
+
 
 .section-heading h2 em {
+
   display: inline;
+
 }
+
+
 
 .info-grid {
+
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 20px;
+
 }
+
+
 
 .info-card {
+
   background: #fffdf7;
+
   padding: 35px 28px;
+
   border-radius: 13px;
+
   border: 1px solid #e5e4d8;
+
   transition: transform 0.25s, box-shadow 0.25s;
+
 }
+
+
 
 .info-card:hover {
+
   transform: translateY(-5px);
+
   box-shadow: 0 15px 30px #173d2b13;
+
 }
+
+
 
 .info-icon {
+
   display: grid;
+
   place-items: center;
+
   width: 52px;
+
   height: 52px;
+
   border-radius: 12px;
+
   background: #e8f0e4;
+
   color: #235c3d;
+
   margin-bottom: 23px;
+
 }
+
+
 
 .info-card > span {
+
   font-size: 10px;
+
   letter-spacing: 2px;
+
   color: #a37c47;
+
   font-weight: 800;
+
 }
+
+
 
 .info-card h3 {
+
   font-size: 21px;
+
   color: #153e2b;
+
   margin: 12px 0 8px;
+
 }
+
+
 
 .info-card p {
+
   font-size: 13px;
+
   margin: 0;
+
 }
+
+
 
 .included {
+
   margin-top: 26px;
+
   padding: 30px 34px;
+
   background: #17442f;
+
   color: white;
+
   border-radius: 12px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 20px;
+
 }
+
+
 
 .included h3 {
+
   font: 600 24px 'Playfair Display', serif;
+
   margin: 9px 0 0;
+
 }
+
+
 
 .included-items {
+
   display: flex;
+
   gap: 26px;
+
   flex-wrap: wrap;
+
 }
+
+
 
 .included-items span {
+
   display: flex;
+
   align-items: center;
+
   gap: 9px;
+
   font-weight: 700;
+
   font-size: 13px;
+
 }
+
+
 
 .included-items svg {
+
   color: #dfba70;
+
 }
+
+
 
 /* =========================================
+
    8. CARTAZ OFICIAL
-========================================= */
+
+\========================================= */
+
+
 
 .poster-section {
+
   background: #fffdf8;
+
 }
+
+
 
 .poster-grid {
+
   grid-template-columns: 1fr 0.8fr;
+
 }
+
+
 
 .poster-preview {
+
   display: block;
+
   width: min(340px, 100%);
+
   margin-inline: auto;
+
   border: 0;
+
   padding: 0;
+
   background: none;
+
   transform: rotate(2deg);
+
   box-shadow: 0 20px 45px #153e2b35;
+
   transition: transform 0.25s;
+
 }
+
+
 
 .poster-preview:hover {
+
   transform: rotate(0deg) scale(1.02);
+
 }
 
+
+
 .poster-preview img {
+
   border: 8px solid #fff;
+
   border-radius: 6px;
+
 }
+
+
 
 /* Modal de visualização */
 
+
+
 .poster-modal {
+
   position: fixed;
+
   inset: 0;
+
   background: #07190ef0;
+
   z-index: 50;
+
   display: grid;
+
   place-items: center;
+
   padding: 25px;
+
   cursor: zoom-out;
+
 }
+
+
 
 .poster-modal img {
+
   max-height: 92vh;
+
   max-width: 95vw;
+
   object-fit: contain;
+
   box-shadow: 0 20px 70px #0008;
+
   cursor: default;
+
 }
+
+
 
 .modal-close {
+
   position: absolute;
+
   right: 24px;
+
   top: 20px;
+
   background: #fff;
+
   border: 0;
+
   border-radius: 50%;
+
   height: 42px;
+
   width: 42px;
+
   display: grid;
+
   place-items: center;
+
   color: #173d2b;
+
   z-index: 1;
+
 }
 
+
+
 /* =========================================
+
    9. INSCRIÇÕES
-========================================= */
+
+\========================================= */
+
+
 
 .signup {
+
   background: radial-gradient(
+
     circle at 20% 0%,
+
     #306b46,
+
     #103b28 60%
+
   );
+
   color: white;
+
   text-align: center;
+
 }
+
+
 
 .signup-content {
+
   max-width: 760px;
+
 }
+
+
 
 .signup h2 {
+
   color: white;
+
 }
+
+
 
 .signup h2 em {
+
   color: #e4bf7b;
+
 }
+
+
 
 .signup p {
+
   color: #dbe6d9;
+
   max-width: 630px;
+
   margin: 0 auto 28px;
+
 }
+
+
 
 .signup .signup-note {
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   gap: 8px;
+
   margin: 22px auto 0;
+
   font-size: 12px;
+
   color: #c8d5c8;
+
 }
 
+
+
 /* =========================================
+
    10. GALERIA
-========================================= */
+
+\========================================= */
+
+
 
 .gallery {
+
   background: #faf6ee;
+
 }
+
+
 
 .gallery-card {
+
   min-height: 310px;
+
   background: #e9eee4;
+
   border: 2px dashed #b5c5b3;
+
   border-radius: 14px;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
   text-align: center;
+
   gap: 14px;
+
   color: #39714f;
+
   padding: 28px;
+
 }
+
+
 
 .gallery-card strong {
+
   font: 600 24px 'Playfair Display', serif;
+
   color: #17442f;
+
 }
+
+
 
 .gallery-card span {
+
   font-size: 13px;
+
   color: #69796d;
+
 }
 
+
+
 /* =========================================
+
    11. RODAPÉ
-========================================= */
+
+\========================================= */
+
+
 
 .footer {
+
   background: #0d2d20;
+
   color: white;
+
   padding-top: 65px;
+
 }
+
+
 
 .footer-main {
+
   display: grid;
+
   grid-template-columns: 2fr 1fr 1fr;
+
   gap: 55px;
+
   padding-bottom: 55px;
+
 }
+
+
 
 .footer .brand {
+
   color: white;
+
 }
+
+
 
 .footer-main p {
+
   max-width: 280px;
+
   font-size: 13px;
+
   line-height: 1.8;
+
   color: #b4c5b7;
+
 }
+
+
 
 .footer-links {
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
+
   font-size: 13px;
+
 }
+
+
 
 .footer-links strong {
+
   color: #e1bc73;
+
   margin-bottom: 7px;
+
 }
+
+
 
 .footer-links a {
+
   color: #bdcbbf;
+
 }
+
+
 
 .footer-links a:hover {
+
   color: #e1bc73;
+
 }
+
+
 
 .footer-bottom {
+
   border-top: 1px solid #ffffff22;
+
   padding: 22px 0;
+
   display: flex;
+
   justify-content: space-between;
+
   gap: 20px;
+
   color: #a8b7aa;
+
   font-size: 12px;
+
 }
 
+
+
 /* =========================================
+
    12. RESPONSIVIDADE - TABLETS
-========================================= */
+
+\========================================= */
+
+
 
 @media (max-width: 900px) {
+
   .hero-grid {
+
     gap: 35px;
+
   }
+
+
 
   .hero h1 {
+
     font-size: clamp(48px, 7vw, 72px);
+
   }
 
+
+
   .about-grid,
+
   .poster-grid,
+
   .gallery-grid {
+
     gap: 42px;
+
   }
+
+
 
   .included {
+
     align-items: flex-start;
+
     flex-direction: column;
+
   }
+
+
 
   .nav-links {
+
     gap: 16px;
+
   }
+
 }
 
+
+
 /* =========================================
+
    13. RESPONSIVIDADE - CELULARES
-========================================= */
+
+\========================================= */
+
+
 
 @media (max-width: 700px) {
+
   .container {
+
     width: min(100% - 32px, 520px);
+
   }
+
+
 
   .nav {
+
     height: 68px;
+
   }
+
+
 
   .nav-links {
+
     display: none;
+
     position: absolute;
+
     top: 68px;
+
     left: 0;
+
     right: 0;
+
     background: #fffdf7;
+
     padding: 24px;
+
     box-shadow: 0 14px 22px #0002;
+
     flex-direction: column;
+
     align-items: stretch;
+
     gap: 22px;
+
   }
+
+
 
   .nav-links.open {
+
     display: flex;
+
   }
+
+
 
   .menu-button {
+
     display: grid;
+
     place-items: center;
+
     background: none;
+
     border: 0;
+
     color: #15452f;
+
   }
+
+
 
   .mobile-signup {
+
     display: block;
+
     color: #17442f;
+
   }
+
+
 
   .nav-cta {
+
     margin-left: auto;
+
     padding: 10px 12px;
+
     font-size: 11px;
+
   }
+
+
 
   .hero-grid {
+
     grid-template-columns: 1fr;
+
     gap: 45px;
+
     min-height: unset;
+
     padding-top: 72px;
+
     padding-bottom: 95px;
+
   }
+
+
 
   .hero h1 {
+
     font-size: clamp(50px, 11vw, 72px);
+
     letter-spacing: -2px;
+
   }
+
+
 
   .hero-description {
+
     font-size: 16px;
+
   }
+
+
 
   .hero-poster-wrap {
+
     width: 75%;
+
     max-width: 300px;
+
   }
+
+
 
   .hero-poster {
+
     max-height: 440px;
+
   }
+
+
 
   .poster-sticker {
+
     right: -20px;
+
     font-size: 10px;
+
   }
+
+
 
   .countdown-layout {
+
     flex-direction: column;
+
     text-align: center;
+
   }
+
+
 
   .count-items {
+
     gap: 8px;
+
   }
+
+
 
   .count-unit {
+
     min-width: 64px;
+
     padding: 11px 9px;
+
   }
+
+
 
   .count-unit strong {
+
     font-size: 23px;
+
   }
+
+
 
   .section {
+
     padding: 75px 0;
+
   }
+
+
 
   .about-grid,
+
   .poster-grid,
+
   .gallery-grid {
+
     grid-template-columns: 1fr;
+
     gap: 45px;
+
   }
+
+
 
   .about-visual {
+
     order: 2;
+
   }
+
+
 
   .about-copy {
+
     order: 1;
+
   }
+
+
 
   .about-image {
+
     height: 390px;
+
   }
+
+
 
   .verse-badge {
+
     right: 0;
+
   }
+
+
 
   .section h2 {
+
     font-size: 38px;
+
   }
+
+
 
   .info-grid {
+
     grid-template-columns: 1fr;
+
   }
+
+
 
   .info-card {
+
     padding: 27px;
+
   }
+
+
 
   .included-items {
+
     gap: 17px;
+
   }
+
+
 
   .poster-preview {
+
     width: min(300px, 85%);
+
   }
+
+
 
   .gallery-card {
+
     min-height: 260px;
+
   }
+
+
 
   .footer-main {
+
     grid-template-columns: 1fr 1fr;
+
     gap: 35px;
+
   }
+
+
 
   .footer-main > div:first-child {
+
     grid-column: 1 / -1;
+
   }
+
+
 
   .footer-bottom {
+
     flex-direction: column;
+
     text-align: center;
+
     gap: 8px;
+
   }
+
+
 
   .hero-actions .button {
+
     width: 100%;
+
   }
+
 }
+
+
 
 /* =========================================
+
    14. ACESSIBILIDADE
-========================================= */
+
+\========================================= */
+
+
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
+
   *::before,
+
   *::after {
+
     scroll-behavior: auto !important;
+
     animation: none !important;
+
     transition: none !important;
+
   }
+
 }
+
+
 
 /* Logo oficial da igreja */
 
+
+
 .brand-mark {
+
   width: 48px;
+
   height: 48px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   border-radius: 50%;
+
   overflow: hidden;
+
   background: #050b2c;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.logo-igreja {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+}
+
+
+
+/* Observação sobre crianças */
+
+
+
+.children-notice {
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: #fff4d9;
+
+  border-left: 4px solid #d5a44e;
+
+  border-radius: 8px;
+
+}
+
+
+
+.children-notice strong {
+
+  display: block;
+
+  color: #75521d;
+
+  font-size: 13px;
+
+  margin-bottom: 7px;
+
+}
+
+
+
+.children-notice p {
+
+  color: #75521d;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  margin: 0;
+
+}
+
+/* =========================================
+   15. REFINAMENTOS RESPONSIVOS
+========================================= */
+
+/* Impede quebra do texto do CTA sem alterar outros links. */
+.nav-cta {
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
-.logo-igreja {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+/* Evita que filhos de grids forcem rolagem horizontal. */
+.hero-grid > *,
+.about-grid > *,
+.poster-grid > *,
+.gallery-grid > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .nav { gap: 14px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 12px; }
+  .nav-cta { padding: 11px 13px; font-size: 12px; }
+  .hero-grid { gap: 30px; }
+  .about-grid, .poster-grid, .gallery-grid { gap: 36px; }
+  .about-image { height: 370px; }
+}
+
+@media (max-width: 700px) {
+  .nav { gap: 10px; }
+  .brand { gap: 7px; font-size: 17px; flex-shrink: 0; }
+  .brand-mark { width: 40px; height: 40px; }
+  .brand small { font-size: 8px; letter-spacing: 1.4px; }
+  .nav-cta { padding: 10px 12px; font-size: 11px; gap: 6px; }
+  .menu-button { flex-shrink: 0; min-width: 40px; min-height: 44px; }
+  .nav-links { z-index: 30; }
+
+  .hero-grid { padding-top: 56px; padding-bottom: 70px; gap: 34px; }
+  .hero h1 { font-size: clamp(42px, 10.5vw, 64px); }
+  .hero-verse { margin-top: 30px; }
+  .hero-poster-wrap { width: min(75%, 290px); }
+  .poster-sticker { right: -12px; bottom: 20px; padding: 10px 12px; }
+
+  .count-items { width: 100%; justify-content: center; }
+  .count-unit { min-width: 0; flex: 0 1 76px; padding: 11px 6px; }
+  .count-unit span { font-size: 9px; }
+
+  .section { padding: 62px 0; }
+  .section h2 { font-size: clamp(31px, 8.5vw, 38px); }
+  .about-grid { gap: 24px; }
+  .about-image {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    box-shadow: 10px 10px 0 #e8e3cf;
+  }
+  .verse-badge { right: 0; bottom: 12px; padding: 12px 14px; gap: 9px; }
+  .verse-badge span { font-size: 11px; }
+  .section-heading { margin-bottom: 32px; }
+  .info-grid { gap: 16px; }
+  .included { padding: 25px 22px; }
+  .footer { padding-top: 48px; }
+  .footer-main { gap: 28px; padding-bottom: 38px; }
+}
+
+@media (max-width: 390px) {
+  .container { width: calc(100% - 28px); }
+  .brand { font-size: 15px; gap: 6px; }
+  .brand-mark { width: 36px; height: 36px; }
+  .brand small { font-size: 7px; letter-spacing: 1px; }
+  .nav-cta { padding: 10px 9px; font-size: 10px; }
+  .menu-button { min-width: 36px; }
+  .hero h1 { font-size: clamp(39px, 10.5vw, 46px); letter-spacing: -1.6px; }
+  .eyebrow, .kicker, .section-tag { letter-spacing: 1.7px; }
+  .count-items { gap: 6px; }
+  .count-unit strong { font-size: 21px; }
+  .poster-sticker { right: -8px; }
+}
+
+@media (max-width: 340px) {
+  .brand { font-size: 14px; }
+  .brand-mark { width: 32px; height: 32px; }
+  .nav-cta { font-size: 9px; padding: 9px 7px; }
+  .menu-button { min-width: 32px; }
+  .footer-main { grid-template-columns: 1fr; }
+  .footer-main > div:first-child { grid-column: auto; }
 }
