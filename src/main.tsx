@@ -189,9 +189,9 @@ function App() {
               </div>
 
               <p className="hero-verse">
-                “Portanto, assim como recebestes o Cristo Jesus,
-                o Senhor, continuai nele, raízes e edificados nele...”
-                <strong> Colossenses 2:6</strong>
+                “Portanto, como vocês receberam Cristo Jesus, o Senhor, continuem a viver nele, 
+                enraizados e edificados nele, firmados na fé, como foram ensinados, transbordando de gratidão.”
+                <strong> Colossenses 2:6,7</strong>
               </p>
             </div>
 
