@@ -2302,3 +2302,89 @@ section {
   .footer-main { grid-template-columns: 1fr; }
   .footer-main > div:first-child { grid-column: auto; }
 }
+
+
+/* =========================================
+   DESTAQUE DO BOTÃO DE INSCRIÇÃO
+========================================= */
+
+.signup-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.signup-highlight {
+  color: #e4bf7b;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.signup-button {
+  padding: 22px 36px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(224, 186, 112, 0.3);
+  animation: signup-pulse 2.8s ease-in-out infinite;
+}
+
+.signup-button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(224, 186, 112, 0.45);
+  animation-play-state: paused;
+}
+
+.signup-helper {
+  color: #dbe6d9;
+  font-size: 12px;
+  text-align: center;
+}
+
+@keyframes signup-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(224, 186, 112, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(224, 186, 112, 0);
+  }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+  .signup-action {
+    width: 100%;
+  }
+
+  .signup-highlight {
+    font-size: 15px;
+  }
+
+  .signup-button {
+    width: 100%;
+    max-width: 360px;
+    padding: 19px 16px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .signup-helper {
+    font-size: 11px;
+  }
+
+  .signup .signup-note {
+    flex-wrap: wrap;
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signup-button {
+    animation: none;
+  }
+}

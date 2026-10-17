@@ -417,7 +417,8 @@ function App() {
           </div>
         </section>
 
-        {/* INSCRIÇÕES */}
+        
+      {/* INSCRIÇÕES */}
         <section className="section signup" id="inscricao">
           <div className="container signup-content">
             <span className="section-tag">
@@ -435,15 +436,25 @@ function App() {
               pela organização.
             </p>
 
-            <a
-              className="button button-gold"
-              href={CONFIG.inscricao}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Quero me inscrever
-              <ExternalLink size={18} />
-            </a>
+            <div className="signup-action">
+              <span className="signup-highlight">
+                Garanta sua participação no Acampamento 2027!
+              </span>
+
+              <a
+                className="button button-gold signup-button"
+                href={CONFIG.inscricao}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CLIQUE AQUI PARA SE INSCREVER
+                <ExternalLink size={20} />
+              </a>
+
+              <span className="signup-helper">
+                Clique no botão acima para acessar o formulário de inscrição.
+              </span>
+            </div>
 
             <p className="signup-note">
               <Clock3 size={16} />
@@ -452,6 +463,7 @@ function App() {
             </p>
           </div>
         </section>
+
 
         {/* GALERIA */}
         <section className="section gallery" id="galeria">
